@@ -1,0 +1,302 @@
+// app global css in SCSS form
+
+
+@import "fonts";
+@import "app.variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+.number {
+  font-family: 'Fira Mono', monospace;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+
+.p-0 {
+  padding: 0;
+}
+
+
+.font-2 {
+  font-family: "Concert One", sans-serif;
+}
+
+.font-number {
+  font-family: 'Fira Mono', monospace;
+}
+
+
+table.list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: var(--table-background);
+  color: var(--table-text-color);
+  width: 100%;
+  cursor: pointer;
+
+  thead {
+    line-height: 12px;
+    background: #0e979b;
+    text-transform: uppercase;
+
+    position: sticky;
+    top: 0;
+
+    th {
+      color: #fff;
+      padding: 12px 0 12px 10px;
+      letter-spacing: 1px;
+      vertical-align: bottom;
+    }
+  }
+
+  tbody {
+    font-size: 1em;
+    line-height: 15px;
+
+    tr {
+      td {
+        padding: 7px;
+      }
+
+      /*&.selected {
+        border: 2px solid #00b7ff;
+      }*/
+    }
+  }
+
+  tfoot {
+    font-size: 0.8em;
+
+    tr {
+      border-top: 1px solid #66adaf;
+
+      td {
+        color: rgba(255, 255, 215, 0.6);
+        text-align: left;
+        line-height: 15px;
+        padding: 12px 20px;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  tfoot.list-empty {
+    tr td {
+      text-align: center;
+    }
+  }
+
+  &.stripped {
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  &.with-sno {
+    tbody {
+      tr {
+        td:first-child {
+          text-align: left;
+          padding-left: 20px;
+          font-weight: 700;
+          background: rgba(109, 176, 231, 0.35);
+          transition: backgrounf 0.6s;
+        }
+      }
+    }
+  }
+
+  &.hover {
+    tbody {
+      tr {
+        transition: background 0.4s, color 0.4s;
+
+        &:hover {
+          color: #000;
+          background: rgba(255, 255, 255, 0.7);
+          font-weight: 900;
+
+          td:first-child {
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+table.grid {
+  tr {
+    td:first-child {
+      border-left: none;
+    }
+
+    td:last-child {
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &:first-child {
+      td {
+        border-top: none;
+
+        &:first-child {
+          p {
+            border-top-left-radius: 0;
+          }
+        }
+
+        &:last-child {
+          p {
+
+            border-top-right-radius: 0;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      td {
+        border-bottom: none;
+
+
+        &:first-child {
+          p {
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        &:last-child {
+          p {
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+td[disabled], a[disabled], td.disabled, a.disabled {
+  background-color: #ccc !important;
+  touch-action: none;
+}
+
+input[error] {
+  background-color: #BA4D24 !important;
+}
+
+table.list {
+  tbody {
+    tr {
+      border: 1px solid var(--table-border);
+
+      &:hover {
+        background: #404040;
+      }
+
+      td {
+        border: 1px solid var(--table-border);
+      }
+
+      &.selected {
+        //border: 2px solid var(--theme-color-light);
+        background: #00585b;
+      }
+    }
+  }
+}
+
+
+.title {
+  font-weight: bold;
+  font-size: 19px;
+  font-family: "Concert One", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+  color: var(--q-color-primary);
+}
+
+.sub-title {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Concert One", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+  color: var(--q-color-secondary);
+}
+
+.sub-title-2 {
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Concert One", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+  font-style: italic;
+}
+
+.btn-close {
+  position: absolute;
+  right: 25px;
+  top: 14px;
+  font-size: 20px;
+}

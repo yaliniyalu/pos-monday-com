@@ -1,0 +1,47 @@
+{
+  "name": "pos",
+  "version": "0.0.1",
+  "description": "POS for monday.com",
+  "productName": "POS",
+  "author": "Samar Yalini <samarjben@outlook.com>",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:pwa": "quasar build -m pwa",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@quasar/extras": "^1.0.0",
+    "core-js": "^3.6.5",
+    "flex-layout-attribute": "^1.0.3",
+    "lodash": "^4.17.21",
+    "monday-sdk-js": "^0.1.2",
+    "printd": "^1.5.0",
+    "quasar": "^1.0.0",
+    "vue2-perfect-scrollbar": "^1.5.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.0",
+    "raw-loader": "^4.0.2"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
